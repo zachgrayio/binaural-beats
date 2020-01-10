@@ -1,0 +1,601 @@
+{
+    "dependency_tree": {
+        "conflict_resolution": {},
+        "dependencies": [
+            {
+                "coord": "ch.qos.logback:logback-classic:1.1.7",
+                "file": "v1/https/jcenter.bintray.com/ch/qos/logback/logback-classic/1.1.7/logback-classic-1.1.7.jar",
+                "directDependencies": [
+                    "ch.qos.logback:logback-core:1.1.7",
+                    "org.slf4j:slf4j-api:1.7.20"
+                ],
+                "dependencies": [
+                    "ch.qos.logback:logback-core:1.1.7",
+                    "org.slf4j:slf4j-api:1.7.20"
+                ],
+                "url": "https://jcenter.bintray.com/ch/qos/logback/logback-classic/1.1.7/logback-classic-1.1.7.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/ch/qos/logback/logback-classic/1.1.7/logback-classic-1.1.7.jar",
+                    "https://maven.google.com/ch/qos/logback/logback-classic/1.1.7/logback-classic-1.1.7.jar",
+                    "https://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.1.7/logback-classic-1.1.7.jar"
+                ],
+                "sha256": "a2c3919263dbf8cc7bb748b02588cb303254d3acf9a81180b8f7727da31677d9"
+            },
+            {
+                "coord": "ch.qos.logback:logback-core:1.1.7",
+                "file": "v1/https/jcenter.bintray.com/ch/qos/logback/logback-core/1.1.7/logback-core-1.1.7.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://jcenter.bintray.com/ch/qos/logback/logback-core/1.1.7/logback-core-1.1.7.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/ch/qos/logback/logback-core/1.1.7/logback-core-1.1.7.jar",
+                    "https://maven.google.com/ch/qos/logback/logback-core/1.1.7/logback-core-1.1.7.jar",
+                    "https://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.1.7/logback-core-1.1.7.jar"
+                ],
+                "sha256": "a500aedf2681fa4850e06698579140bb6233ee0e1878f98862b48ccca4b2f1de"
+            },
+            {
+                "coord": "com.github.scopt:scopt_2.11:4.0.0-RC2",
+                "file": "v1/https/jcenter.bintray.com/com/github/scopt/scopt_2.11/4.0.0-RC2/scopt_2.11-4.0.0-RC2.jar",
+                "directDependencies": [
+                    "org.scala-lang:scala-library:2.11.12"
+                ],
+                "dependencies": [
+                    "org.scala-lang:scala-library:2.11.12"
+                ],
+                "url": "https://jcenter.bintray.com/com/github/scopt/scopt_2.11/4.0.0-RC2/scopt_2.11-4.0.0-RC2.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/com/github/scopt/scopt_2.11/4.0.0-RC2/scopt_2.11-4.0.0-RC2.jar",
+                    "https://maven.google.com/com/github/scopt/scopt_2.11/4.0.0-RC2/scopt_2.11-4.0.0-RC2.jar",
+                    "https://repo1.maven.org/maven2/com/github/scopt/scopt_2.11/4.0.0-RC2/scopt_2.11-4.0.0-RC2.jar"
+                ],
+                "sha256": "956dfc89d3208e4a6d8bbfe0205410c082cee90c4ce08be30f97c044dffc3435"
+            },
+            {
+                "coord": "com.github.yannrichet:JMathArray:1.0",
+                "file": "v1/https/jcenter.bintray.com/com/github/yannrichet/JMathArray/1.0/JMathArray-1.0.jar",
+                "directDependencies": [
+                    "gov.nist.math:jama:1.0.3"
+                ],
+                "dependencies": [
+                    "gov.nist.math:jama:1.0.3"
+                ],
+                "url": "https://jcenter.bintray.com/com/github/yannrichet/JMathArray/1.0/JMathArray-1.0.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/com/github/yannrichet/JMathArray/1.0/JMathArray-1.0.jar",
+                    "https://maven.google.com/com/github/yannrichet/JMathArray/1.0/JMathArray-1.0.jar",
+                    "https://repo1.maven.org/maven2/com/github/yannrichet/JMathArray/1.0/JMathArray-1.0.jar"
+                ],
+                "sha256": "f441fdce8b2dbed26bd14f652f0c0ce49adebee89ad856d67876c2d4aa3fae94"
+            },
+            {
+                "coord": "com.github.yannrichet:JMathIO:1.0",
+                "file": "v1/https/jcenter.bintray.com/com/github/yannrichet/JMathIO/1.0/JMathIO-1.0.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://jcenter.bintray.com/com/github/yannrichet/JMathIO/1.0/JMathIO-1.0.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/com/github/yannrichet/JMathIO/1.0/JMathIO-1.0.jar",
+                    "https://maven.google.com/com/github/yannrichet/JMathIO/1.0/JMathIO-1.0.jar",
+                    "https://repo1.maven.org/maven2/com/github/yannrichet/JMathIO/1.0/JMathIO-1.0.jar"
+                ],
+                "sha256": "458d85ecf69e5b6daf7b8b131dfc18234544a0a3308b78bf5c5e34ad1665909a"
+            },
+            {
+                "coord": "com.github.yannrichet:JMathPlot:1.0.1",
+                "file": "v1/https/jcenter.bintray.com/com/github/yannrichet/JMathPlot/1.0.1/JMathPlot-1.0.1.jar",
+                "directDependencies": [
+                    "com.github.yannrichet:JMathArray:1.0",
+                    "com.github.yannrichet:JMathIO:1.0"
+                ],
+                "dependencies": [
+                    "com.github.yannrichet:JMathIO:1.0",
+                    "gov.nist.math:jama:1.0.3",
+                    "com.github.yannrichet:JMathArray:1.0"
+                ],
+                "url": "https://jcenter.bintray.com/com/github/yannrichet/JMathPlot/1.0.1/JMathPlot-1.0.1.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/com/github/yannrichet/JMathPlot/1.0.1/JMathPlot-1.0.1.jar",
+                    "https://maven.google.com/com/github/yannrichet/JMathPlot/1.0.1/JMathPlot-1.0.1.jar",
+                    "https://repo1.maven.org/maven2/com/github/yannrichet/JMathPlot/1.0.1/JMathPlot-1.0.1.jar"
+                ],
+                "sha256": "1e6a2e36554f6c03d48406fb5a1a5fe5d6016ad27b3a77e057ddd6f1eb6fd000"
+            },
+            {
+                "coord": "com.novocode:junit-interface:0.11",
+                "file": "v1/https/jcenter.bintray.com/com/novocode/junit-interface/0.11/junit-interface-0.11.jar",
+                "directDependencies": [
+                    "junit:junit:4.12",
+                    "org.scala-sbt:test-interface:1.0"
+                ],
+                "dependencies": [
+                    "org.hamcrest:hamcrest-core:1.3",
+                    "org.scala-sbt:test-interface:1.0",
+                    "junit:junit:4.12"
+                ],
+                "url": "https://jcenter.bintray.com/com/novocode/junit-interface/0.11/junit-interface-0.11.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/com/novocode/junit-interface/0.11/junit-interface-0.11.jar",
+                    "https://maven.google.com/com/novocode/junit-interface/0.11/junit-interface-0.11.jar",
+                    "https://repo1.maven.org/maven2/com/novocode/junit-interface/0.11/junit-interface-0.11.jar"
+                ],
+                "sha256": "29e923226a0d10e9142bbd81073ef52f601277001fcf9014389bf0af3dc33dc3"
+            },
+            {
+                "coord": "commons-codec:commons-codec:1.9",
+                "file": "v1/https/jcenter.bintray.com/commons-codec/commons-codec/1.9/commons-codec-1.9.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://jcenter.bintray.com/commons-codec/commons-codec/1.9/commons-codec-1.9.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/commons-codec/commons-codec/1.9/commons-codec-1.9.jar",
+                    "https://maven.google.com/commons-codec/commons-codec/1.9/commons-codec-1.9.jar",
+                    "https://repo1.maven.org/maven2/commons-codec/commons-codec/1.9/commons-codec-1.9.jar"
+                ],
+                "sha256": "ad19d2601c3abf0b946b5c3a4113e226a8c1e3305e395b90013b78dd94a723ce"
+            },
+            {
+                "coord": "commons-logging:commons-logging:1.2",
+                "file": "v1/https/jcenter.bintray.com/commons-logging/commons-logging/1.2/commons-logging-1.2.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://jcenter.bintray.com/commons-logging/commons-logging/1.2/commons-logging-1.2.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/commons-logging/commons-logging/1.2/commons-logging-1.2.jar",
+                    "https://maven.google.com/commons-logging/commons-logging/1.2/commons-logging-1.2.jar",
+                    "https://repo1.maven.org/maven2/commons-logging/commons-logging/1.2/commons-logging-1.2.jar"
+                ],
+                "sha256": "daddea1ea0be0f56978ab3006b8ac92834afeefbd9b7e4e6316fca57df0fa636"
+            },
+            {
+                "coord": "gov.nist.math:jama:1.0.3",
+                "file": "v1/https/jcenter.bintray.com/gov/nist/math/jama/1.0.3/jama-1.0.3.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://jcenter.bintray.com/gov/nist/math/jama/1.0.3/jama-1.0.3.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/gov/nist/math/jama/1.0.3/jama-1.0.3.jar",
+                    "https://maven.google.com/gov/nist/math/jama/1.0.3/jama-1.0.3.jar",
+                    "https://repo1.maven.org/maven2/gov/nist/math/jama/1.0.3/jama-1.0.3.jar"
+                ],
+                "sha256": "c7325ee29be1aac1287ddac690f73671f1cd911ca9eca7c619990e86310556fd"
+            },
+            {
+                "coord": "javax.servlet:javax.servlet-api:3.1.0",
+                "file": "v1/https/jcenter.bintray.com/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://jcenter.bintray.com/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar",
+                    "https://maven.google.com/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar",
+                    "https://repo1.maven.org/maven2/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar"
+                ],
+                "sha256": "af456b2dd41c4e82cf54f3e743bc678973d9fe35bd4d3071fa05c7e5333b8482"
+            },
+            {
+                "coord": "junit:junit:4.12",
+                "file": "v1/https/jcenter.bintray.com/junit/junit/4.12/junit-4.12.jar",
+                "directDependencies": [
+                    "org.hamcrest:hamcrest-core:1.3"
+                ],
+                "dependencies": [
+                    "org.hamcrest:hamcrest-core:1.3"
+                ],
+                "url": "https://jcenter.bintray.com/junit/junit/4.12/junit-4.12.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/junit/junit/4.12/junit-4.12.jar",
+                    "https://maven.google.com/junit/junit/4.12/junit-4.12.jar",
+                    "https://repo1.maven.org/maven2/junit/junit/4.12/junit-4.12.jar"
+                ],
+                "sha256": "59721f0805e223d84b90677887d9ff567dc534d7c502ca903c0c2b17f05c116a"
+            },
+            {
+                "coord": "net.sf.jopt-simple:jopt-simple:4.6",
+                "file": "v1/https/jcenter.bintray.com/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://jcenter.bintray.com/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar",
+                    "https://maven.google.com/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar",
+                    "https://repo1.maven.org/maven2/net/sf/jopt-simple/jopt-simple/4.6/jopt-simple-4.6.jar"
+                ],
+                "sha256": "3fcfbe3203c2ea521bf7640484fd35d6303186ea2e08e72f032d640ca067ffda"
+            },
+            {
+                "coord": "org.apache.commons:commons-math3:3.6",
+                "file": "v1/https/jcenter.bintray.com/org/apache/commons/commons-math3/3.6/commons-math3-3.6.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://jcenter.bintray.com/org/apache/commons/commons-math3/3.6/commons-math3-3.6.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/apache/commons/commons-math3/3.6/commons-math3-3.6.jar",
+                    "https://maven.google.com/org/apache/commons/commons-math3/3.6/commons-math3-3.6.jar",
+                    "https://repo1.maven.org/maven2/org/apache/commons/commons-math3/3.6/commons-math3-3.6.jar"
+                ],
+                "sha256": "ec9d4def3fbd8d7e72206155799711db3272d45e099d08ea4c68001ad6d3054e"
+            },
+            {
+                "coord": "org.apache.httpcomponents:httpclient:4.4.1",
+                "file": "v1/https/jcenter.bintray.com/org/apache/httpcomponents/httpclient/4.4.1/httpclient-4.4.1.jar",
+                "directDependencies": [
+                    "commons-codec:commons-codec:1.9",
+                    "commons-logging:commons-logging:1.2",
+                    "org.apache.httpcomponents:httpcore:4.4.1"
+                ],
+                "dependencies": [
+                    "commons-codec:commons-codec:1.9",
+                    "commons-logging:commons-logging:1.2",
+                    "org.apache.httpcomponents:httpcore:4.4.1"
+                ],
+                "url": "https://jcenter.bintray.com/org/apache/httpcomponents/httpclient/4.4.1/httpclient-4.4.1.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/apache/httpcomponents/httpclient/4.4.1/httpclient-4.4.1.jar",
+                    "https://maven.google.com/org/apache/httpcomponents/httpclient/4.4.1/httpclient-4.4.1.jar",
+                    "https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.4.1/httpclient-4.4.1.jar"
+                ],
+                "sha256": "b2958ffb74f691e108abe69af0002ccff90ba326420596b1aab5bb0f63c31ef9"
+            },
+            {
+                "coord": "org.apache.httpcomponents:httpcore:4.4.1",
+                "file": "v1/https/jcenter.bintray.com/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://jcenter.bintray.com/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar",
+                    "https://maven.google.com/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar",
+                    "https://repo1.maven.org/maven2/org/apache/httpcomponents/httpcore/4.4.1/httpcore-4.4.1.jar"
+                ],
+                "sha256": "dd1390c17d40f760f7e51bb20523a8d63deb69e94babeaf567eb76ecd2cad422"
+            },
+            {
+                "coord": "org.apache.thrift:libthrift:0.9.3",
+                "file": "v1/https/jcenter.bintray.com/org/apache/thrift/libthrift/0.9.3/libthrift-0.9.3.jar",
+                "directDependencies": [
+                    "org.apache.httpcomponents:httpclient:4.4.1",
+                    "org.apache.httpcomponents:httpcore:4.4.1",
+                    "org.slf4j:slf4j-api:1.7.20"
+                ],
+                "dependencies": [
+                    "commons-logging:commons-logging:1.2",
+                    "commons-codec:commons-codec:1.9",
+                    "org.apache.httpcomponents:httpclient:4.4.1",
+                    "org.slf4j:slf4j-api:1.7.20",
+                    "org.apache.httpcomponents:httpcore:4.4.1"
+                ],
+                "url": "https://jcenter.bintray.com/org/apache/thrift/libthrift/0.9.3/libthrift-0.9.3.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/apache/thrift/libthrift/0.9.3/libthrift-0.9.3.jar",
+                    "https://maven.google.com/org/apache/thrift/libthrift/0.9.3/libthrift-0.9.3.jar",
+                    "https://repo1.maven.org/maven2/org/apache/thrift/libthrift/0.9.3/libthrift-0.9.3.jar"
+                ],
+                "sha256": "bca5e8cdee1e0fbf563de7d41c452385e7bed69723fa28225a9ce718a8ee3419"
+            },
+            {
+                "coord": "org.auroboros:signal-z_2.11:0.1.0",
+                "file": "v1/https/jcenter.bintray.com/org/auroboros/signal-z_2.11/0.1.0/signal-z_2.11-0.1.0.jar",
+                "directDependencies": [
+                    "org.scala-lang:scala-library:2.11.12"
+                ],
+                "dependencies": [
+                    "org.scala-lang:scala-library:2.11.12"
+                ],
+                "url": "https://jcenter.bintray.com/org/auroboros/signal-z_2.11/0.1.0/signal-z_2.11-0.1.0.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/auroboros/signal-z_2.11/0.1.0/signal-z_2.11-0.1.0.jar",
+                    "https://maven.google.com/org/auroboros/signal-z_2.11/0.1.0/signal-z_2.11-0.1.0.jar",
+                    "https://repo1.maven.org/maven2/org/auroboros/signal-z_2.11/0.1.0/signal-z_2.11-0.1.0.jar"
+                ],
+                "sha256": "5987e7c35469876eeb4ac29a5e058fa39eacd5252390d98171562c2412a94d23"
+            },
+            {
+                "coord": "org.clojars.sidec:jsyn:16.7.3",
+                "file": "v1/https/jcenter.bintray.com/org/clojars/sidec/jsyn/16.7.3/jsyn-16.7.3.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://jcenter.bintray.com/org/clojars/sidec/jsyn/16.7.3/jsyn-16.7.3.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/clojars/sidec/jsyn/16.7.3/jsyn-16.7.3.jar",
+                    "https://maven.google.com/org/clojars/sidec/jsyn/16.7.3/jsyn-16.7.3.jar",
+                    "https://repo1.maven.org/maven2/org/clojars/sidec/jsyn/16.7.3/jsyn-16.7.3.jar"
+                ],
+                "sha256": "38ec13affaf43873c72136381a9270d14f232eeb503e5f13bacca5f3ecc79238"
+            },
+            {
+                "coord": "org.eclipse.jetty:jetty-continuation:9.4.0.M0",
+                "file": "v1/https/jcenter.bintray.com/org/eclipse/jetty/jetty-continuation/9.4.0.M0/jetty-continuation-9.4.0.M0.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://jcenter.bintray.com/org/eclipse/jetty/jetty-continuation/9.4.0.M0/jetty-continuation-9.4.0.M0.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/eclipse/jetty/jetty-continuation/9.4.0.M0/jetty-continuation-9.4.0.M0.jar",
+                    "https://maven.google.com/org/eclipse/jetty/jetty-continuation/9.4.0.M0/jetty-continuation-9.4.0.M0.jar",
+                    "https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-continuation/9.4.0.M0/jetty-continuation-9.4.0.M0.jar"
+                ],
+                "sha256": "bba675f79e4995357f881fbbb9199f977abc2ce87d0787bfe347a003c3fcea49"
+            },
+            {
+                "coord": "org.eclipse.jetty:jetty-http:9.4.0.M0",
+                "file": "v1/https/jcenter.bintray.com/org/eclipse/jetty/jetty-http/9.4.0.M0/jetty-http-9.4.0.M0.jar",
+                "directDependencies": [
+                    "org.eclipse.jetty:jetty-util:9.4.0.M0"
+                ],
+                "dependencies": [
+                    "org.eclipse.jetty:jetty-util:9.4.0.M0"
+                ],
+                "url": "https://jcenter.bintray.com/org/eclipse/jetty/jetty-http/9.4.0.M0/jetty-http-9.4.0.M0.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/eclipse/jetty/jetty-http/9.4.0.M0/jetty-http-9.4.0.M0.jar",
+                    "https://maven.google.com/org/eclipse/jetty/jetty-http/9.4.0.M0/jetty-http-9.4.0.M0.jar",
+                    "https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-http/9.4.0.M0/jetty-http-9.4.0.M0.jar"
+                ],
+                "sha256": "d113d8e81c87f1f3e640c6aa4ace6168ae8a31b0d2c14bade3757b56b7383caf"
+            },
+            {
+                "coord": "org.eclipse.jetty:jetty-io:9.4.0.M0",
+                "file": "v1/https/jcenter.bintray.com/org/eclipse/jetty/jetty-io/9.4.0.M0/jetty-io-9.4.0.M0.jar",
+                "directDependencies": [
+                    "org.eclipse.jetty:jetty-util:9.4.0.M0"
+                ],
+                "dependencies": [
+                    "org.eclipse.jetty:jetty-util:9.4.0.M0"
+                ],
+                "url": "https://jcenter.bintray.com/org/eclipse/jetty/jetty-io/9.4.0.M0/jetty-io-9.4.0.M0.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/eclipse/jetty/jetty-io/9.4.0.M0/jetty-io-9.4.0.M0.jar",
+                    "https://maven.google.com/org/eclipse/jetty/jetty-io/9.4.0.M0/jetty-io-9.4.0.M0.jar",
+                    "https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-io/9.4.0.M0/jetty-io-9.4.0.M0.jar"
+                ],
+                "sha256": "b92e3b8198118abe10e46a893a7a4142ce99e932c4364cecb6cd8190752e279a"
+            },
+            {
+                "coord": "org.eclipse.jetty:jetty-security:9.4.0.M0",
+                "file": "v1/https/jcenter.bintray.com/org/eclipse/jetty/jetty-security/9.4.0.M0/jetty-security-9.4.0.M0.jar",
+                "directDependencies": [
+                    "org.eclipse.jetty:jetty-server:9.4.0.M0"
+                ],
+                "dependencies": [
+                    "org.eclipse.jetty:jetty-io:9.4.0.M0",
+                    "org.eclipse.jetty:jetty-http:9.4.0.M0",
+                    "org.eclipse.jetty:jetty-util:9.4.0.M0",
+                    "org.eclipse.jetty:jetty-server:9.4.0.M0",
+                    "javax.servlet:javax.servlet-api:3.1.0"
+                ],
+                "url": "https://jcenter.bintray.com/org/eclipse/jetty/jetty-security/9.4.0.M0/jetty-security-9.4.0.M0.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/eclipse/jetty/jetty-security/9.4.0.M0/jetty-security-9.4.0.M0.jar",
+                    "https://maven.google.com/org/eclipse/jetty/jetty-security/9.4.0.M0/jetty-security-9.4.0.M0.jar",
+                    "https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-security/9.4.0.M0/jetty-security-9.4.0.M0.jar"
+                ],
+                "sha256": "ae14d789b06a120d9d44111910462dfbdcac1f113913dfa43e48d5c1f47f2c36"
+            },
+            {
+                "coord": "org.eclipse.jetty:jetty-server:9.4.0.M0",
+                "file": "v1/https/jcenter.bintray.com/org/eclipse/jetty/jetty-server/9.4.0.M0/jetty-server-9.4.0.M0.jar",
+                "directDependencies": [
+                    "javax.servlet:javax.servlet-api:3.1.0",
+                    "org.eclipse.jetty:jetty-http:9.4.0.M0",
+                    "org.eclipse.jetty:jetty-io:9.4.0.M0"
+                ],
+                "dependencies": [
+                    "org.eclipse.jetty:jetty-http:9.4.0.M0",
+                    "javax.servlet:javax.servlet-api:3.1.0",
+                    "org.eclipse.jetty:jetty-io:9.4.0.M0",
+                    "org.eclipse.jetty:jetty-util:9.4.0.M0"
+                ],
+                "url": "https://jcenter.bintray.com/org/eclipse/jetty/jetty-server/9.4.0.M0/jetty-server-9.4.0.M0.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/eclipse/jetty/jetty-server/9.4.0.M0/jetty-server-9.4.0.M0.jar",
+                    "https://maven.google.com/org/eclipse/jetty/jetty-server/9.4.0.M0/jetty-server-9.4.0.M0.jar",
+                    "https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-server/9.4.0.M0/jetty-server-9.4.0.M0.jar"
+                ],
+                "sha256": "a97f70ec864238191712a564fbf7079438f6a0d8fb50774d6d5fd9147989e1fc"
+            },
+            {
+                "coord": "org.eclipse.jetty:jetty-servlet:9.4.0.M0",
+                "file": "v1/https/jcenter.bintray.com/org/eclipse/jetty/jetty-servlet/9.4.0.M0/jetty-servlet-9.4.0.M0.jar",
+                "directDependencies": [
+                    "org.eclipse.jetty:jetty-security:9.4.0.M0"
+                ],
+                "dependencies": [
+                    "org.eclipse.jetty:jetty-io:9.4.0.M0",
+                    "org.eclipse.jetty:jetty-http:9.4.0.M0",
+                    "org.eclipse.jetty:jetty-util:9.4.0.M0",
+                    "org.eclipse.jetty:jetty-server:9.4.0.M0",
+                    "org.eclipse.jetty:jetty-security:9.4.0.M0",
+                    "javax.servlet:javax.servlet-api:3.1.0"
+                ],
+                "url": "https://jcenter.bintray.com/org/eclipse/jetty/jetty-servlet/9.4.0.M0/jetty-servlet-9.4.0.M0.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/eclipse/jetty/jetty-servlet/9.4.0.M0/jetty-servlet-9.4.0.M0.jar",
+                    "https://maven.google.com/org/eclipse/jetty/jetty-servlet/9.4.0.M0/jetty-servlet-9.4.0.M0.jar",
+                    "https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-servlet/9.4.0.M0/jetty-servlet-9.4.0.M0.jar"
+                ],
+                "sha256": "79bb51757ca68a2424f643ff9d639e3a68f1172f6637bc804fec82457baf1a27"
+            },
+            {
+                "coord": "org.eclipse.jetty:jetty-servlets:9.4.0.M0",
+                "file": "v1/https/jcenter.bintray.com/org/eclipse/jetty/jetty-servlets/9.4.0.M0/jetty-servlets-9.4.0.M0.jar",
+                "directDependencies": [
+                    "org.eclipse.jetty:jetty-continuation:9.4.0.M0",
+                    "org.eclipse.jetty:jetty-http:9.4.0.M0",
+                    "org.eclipse.jetty:jetty-io:9.4.0.M0",
+                    "org.eclipse.jetty:jetty-util:9.4.0.M0"
+                ],
+                "dependencies": [
+                    "org.eclipse.jetty:jetty-http:9.4.0.M0",
+                    "org.eclipse.jetty:jetty-io:9.4.0.M0",
+                    "org.eclipse.jetty:jetty-continuation:9.4.0.M0",
+                    "org.eclipse.jetty:jetty-util:9.4.0.M0"
+                ],
+                "url": "https://jcenter.bintray.com/org/eclipse/jetty/jetty-servlets/9.4.0.M0/jetty-servlets-9.4.0.M0.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/eclipse/jetty/jetty-servlets/9.4.0.M0/jetty-servlets-9.4.0.M0.jar",
+                    "https://maven.google.com/org/eclipse/jetty/jetty-servlets/9.4.0.M0/jetty-servlets-9.4.0.M0.jar",
+                    "https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-servlets/9.4.0.M0/jetty-servlets-9.4.0.M0.jar"
+                ],
+                "sha256": "4132fb60edd3dda5011c0410a1c0666f9c8f5f0329a30e22b9df37d4ee5ec900"
+            },
+            {
+                "coord": "org.eclipse.jetty:jetty-util:9.4.0.M0",
+                "file": "v1/https/jcenter.bintray.com/org/eclipse/jetty/jetty-util/9.4.0.M0/jetty-util-9.4.0.M0.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://jcenter.bintray.com/org/eclipse/jetty/jetty-util/9.4.0.M0/jetty-util-9.4.0.M0.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/eclipse/jetty/jetty-util/9.4.0.M0/jetty-util-9.4.0.M0.jar",
+                    "https://maven.google.com/org/eclipse/jetty/jetty-util/9.4.0.M0/jetty-util-9.4.0.M0.jar",
+                    "https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-util/9.4.0.M0/jetty-util-9.4.0.M0.jar"
+                ],
+                "sha256": "106e29630d18a55b4652763057e7636d407e149c09fcbd9913644e158f815153"
+            },
+            {
+                "coord": "org.hamcrest:hamcrest-core:1.3",
+                "file": "v1/https/jcenter.bintray.com/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://jcenter.bintray.com/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar",
+                    "https://maven.google.com/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar",
+                    "https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"
+                ],
+                "sha256": "66fdef91e9739348df7a096aa384a5685f4e875584cce89386a7a47251c4d8e9"
+            },
+            {
+                "coord": "org.openjdk.jmh:jmh-core:1.12",
+                "file": "v1/https/jcenter.bintray.com/org/openjdk/jmh/jmh-core/1.12/jmh-core-1.12.jar",
+                "directDependencies": [
+                    "net.sf.jopt-simple:jopt-simple:4.6",
+                    "org.apache.commons:commons-math3:3.6"
+                ],
+                "dependencies": [
+                    "net.sf.jopt-simple:jopt-simple:4.6",
+                    "org.apache.commons:commons-math3:3.6"
+                ],
+                "url": "https://jcenter.bintray.com/org/openjdk/jmh/jmh-core/1.12/jmh-core-1.12.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/openjdk/jmh/jmh-core/1.12/jmh-core-1.12.jar",
+                    "https://maven.google.com/org/openjdk/jmh/jmh-core/1.12/jmh-core-1.12.jar",
+                    "https://repo1.maven.org/maven2/org/openjdk/jmh/jmh-core/1.12/jmh-core-1.12.jar"
+                ],
+                "sha256": "056e8d0ee1941d3a94c16e38bc198c100e7c653186a72d80ee48bab1b2fb07b8"
+            },
+            {
+                "coord": "org.scala-lang.modules:scala-xml_2.11:1.0.2",
+                "file": "v1/https/jcenter.bintray.com/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar",
+                "directDependencies": [
+                    "org.scala-lang:scala-library:2.11.12"
+                ],
+                "dependencies": [
+                    "org.scala-lang:scala-library:2.11.12"
+                ],
+                "url": "https://jcenter.bintray.com/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar",
+                    "https://maven.google.com/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar",
+                    "https://repo1.maven.org/maven2/org/scala-lang/modules/scala-xml_2.11/1.0.2/scala-xml_2.11-1.0.2.jar"
+                ],
+                "sha256": "13c0d8d442bde14b73af3ed60e8d53452f9e1ad62ffbe3d944cb918df652db6f"
+            },
+            {
+                "coord": "org.scala-lang:scala-library:2.11.12",
+                "file": "v1/https/jcenter.bintray.com/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://jcenter.bintray.com/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar",
+                    "https://maven.google.com/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar",
+                    "https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.12/scala-library-2.11.12.jar"
+                ],
+                "sha256": "0b3d6fd42958ee98715ba2ec5fe221f4ca1e694d7c981b0ae0cd68e97baf6dce"
+            },
+            {
+                "coord": "org.scala-lang:scala-reflect:2.11.2",
+                "file": "v1/https/jcenter.bintray.com/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar",
+                "directDependencies": [
+                    "org.scala-lang:scala-library:2.11.12"
+                ],
+                "dependencies": [
+                    "org.scala-lang:scala-library:2.11.12"
+                ],
+                "url": "https://jcenter.bintray.com/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar",
+                    "https://maven.google.com/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar",
+                    "https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.2/scala-reflect-2.11.2.jar"
+                ],
+                "sha256": "2afea573cc397fdb64d238e5d56c01c24ea876ce9205b01355257f7cf3a9bfd1"
+            },
+            {
+                "coord": "org.scala-sbt:test-interface:1.0",
+                "file": "v1/https/jcenter.bintray.com/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://jcenter.bintray.com/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar",
+                    "https://maven.google.com/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar",
+                    "https://repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar"
+                ],
+                "sha256": "15f70b38bb95f3002fec9aea54030f19bb4ecfbad64c67424b5e5fea09cd749e"
+            },
+            {
+                "coord": "org.scalatest:scalatest_2.11:2.2.4",
+                "file": "v1/https/jcenter.bintray.com/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar",
+                "directDependencies": [
+                    "org.scala-lang:scala-library:2.11.12",
+                    "org.scala-lang:scala-reflect:2.11.2",
+                    "org.scala-lang.modules:scala-xml_2.11:1.0.2"
+                ],
+                "dependencies": [
+                    "org.scala-lang:scala-library:2.11.12",
+                    "org.scala-lang:scala-reflect:2.11.2",
+                    "org.scala-lang.modules:scala-xml_2.11:1.0.2"
+                ],
+                "url": "https://jcenter.bintray.com/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar",
+                    "https://maven.google.com/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar",
+                    "https://repo1.maven.org/maven2/org/scalatest/scalatest_2.11/2.2.4/scalatest_2.11-2.2.4.jar"
+                ],
+                "sha256": "7025309ed95c559dc7b58231ee711f1c16c78da2196fe7010bc085d7c130c313"
+            },
+            {
+                "coord": "org.scalaz:scalaz-core_2.11:7.2.7",
+                "file": "v1/https/jcenter.bintray.com/org/scalaz/scalaz-core_2.11/7.2.7/scalaz-core_2.11-7.2.7.jar",
+                "directDependencies": [
+                    "org.scala-lang:scala-library:2.11.12"
+                ],
+                "dependencies": [
+                    "org.scala-lang:scala-library:2.11.12"
+                ],
+                "url": "https://jcenter.bintray.com/org/scalaz/scalaz-core_2.11/7.2.7/scalaz-core_2.11-7.2.7.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/scalaz/scalaz-core_2.11/7.2.7/scalaz-core_2.11-7.2.7.jar",
+                    "https://maven.google.com/org/scalaz/scalaz-core_2.11/7.2.7/scalaz-core_2.11-7.2.7.jar",
+                    "https://repo1.maven.org/maven2/org/scalaz/scalaz-core_2.11/7.2.7/scalaz-core_2.11-7.2.7.jar"
+                ],
+                "sha256": "810504bc8d669913af830dd5d9c87f83e0570898f09be6474f0d5603bba8ba79"
+            },
+            {
+                "coord": "org.slf4j:slf4j-api:1.7.20",
+                "file": "v1/https/jcenter.bintray.com/org/slf4j/slf4j-api/1.7.20/slf4j-api-1.7.20.jar",
+                "directDependencies": [],
+                "dependencies": [],
+                "url": "https://jcenter.bintray.com/org/slf4j/slf4j-api/1.7.20/slf4j-api-1.7.20.jar",
+                "mirror_urls": [
+                    "https://jcenter.bintray.com/org/slf4j/slf4j-api/1.7.20/slf4j-api-1.7.20.jar",
+                    "https://maven.google.com/org/slf4j/slf4j-api/1.7.20/slf4j-api-1.7.20.jar",
+                    "https://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.20/slf4j-api-1.7.20.jar"
+                ],
+                "sha256": "2967c337180f6dca88a8a6140495b9f0b8a85b8527d02b0089bdbf9cdb34d40b"
+            }
+        ],
+        "version": "0.1.0",
+        "__AUTOGENERATED_FILE_DO_NOT_MODIFY_THIS_FILE_MANUALLY": 1344285318
+    }
+}
