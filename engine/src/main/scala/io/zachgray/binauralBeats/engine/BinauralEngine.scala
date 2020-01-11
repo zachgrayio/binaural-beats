@@ -1,7 +1,8 @@
 package io.zachgray.binauralBeats.engine
 
+import io.zachgray.binauralBeats.engine.BinauralEngine.{createBinauralFrameFunction, createDualBinauralFrameFunctions}
 import scalaudio.core.types.{Frame, Pitch}
-import scalaudio.core.{AudioContext, ScalaudioConfig}
+import scalaudio.core.{AudioContext, DefaultAudioContext, ScalaudioConfig}
 import scalaudio.units.AmpSyntax
 import scalaudio.units.filter.{GainFilter, StereoPanner}
 import scalaudio.units.ugen.{OscState, Sine}
@@ -9,7 +10,7 @@ import scalaz.Scalaz._
 
 import scala.concurrent.duration._
 
-object BinauralEngine extends AmpSyntax {
+object BinauralEngine extends AmpSyntax with DefaultAudioContext {
 
   /**
    * Creates a stereo audio context and invokes playback for the specified configuration.
@@ -17,7 +18,6 @@ object BinauralEngine extends AmpSyntax {
    * @param binauralBeatConfiguration the configuration of the binaural beats which should be generated.
    */
   def play(binauralBeatConfiguration: BinauralBeatsConfiguration): Unit = {
-    implicit val audioContext: AudioContext = AudioContext(ScalaudioConfig(nOutChannels = 2))
     playback(
       frameFunc = createBinauralFrameFunction(
         pitch = binauralBeatConfiguration.pitch,
@@ -25,6 +25,37 @@ object BinauralEngine extends AmpSyntax {
       ),
       duration = binauralBeatConfiguration.duration seconds
     )
+  }
+
+  /**
+   * Creates a stereo audio context and invokes `record` for the specified configuration.
+   *
+   * @param config the configuration of the binaural beats which should be generated.
+   */
+  def writeToFile(config: BinauralBeatsConfiguration): Unit = {
+    if (config.separateFiles) {
+      writeToSeparateFiles(config)
+    } else {
+      record(
+        fileName = config.fileName.get,
+        frameFunc = createBinauralFrameFunction(
+          pitch = config.pitch,
+          binauralPitch = config.binauralPitch
+        ),
+        duration = config.duration seconds
+      )
+    }
+  }
+
+  private def writeToSeparateFiles(config: BinauralBeatsConfiguration): Unit = {
+    val ffs = createDualBinauralFrameFunctions(config.pitch, config.binauralPitch)
+    for((ff, index) <- ffs.zipWithIndex) {
+      record(
+        fileName = config.fileName.get + "_" + index,
+        frameFunc = ff,
+        duration = config.duration seconds
+      )
+    }
   }
 
   /**
@@ -60,14 +91,25 @@ object BinauralEngine extends AmpSyntax {
    * @return the binaural frame function
    */
   def createBinauralFrameFunction(pitch: Double, binauralPitch: Double)(implicit audioContext: AudioContext): () => Frame = {
-    val frameFunctions = Seq(
-      createSineWaveFrameFunction(pitch, 0, 1),
-      createSineWaveFrameFunction(pitch + binauralPitch, 1, 1)
-    )
+    val frameFunctions = createDualBinauralFrameFunctions(pitch, binauralPitch)
     var interleave = false
     () => {
       interleave = !interleave
       frameFunctions(interleave.compare(false))()
     }
+  }
+
+  /**
+   *
+   * @param pitch The baseline pitch (in Hz) of the binaural beat
+   * @param binauralPitch The pitch of the binaural frequency which should be generated
+   * @param audioContext The audio context
+   * @return the binaural frame functions
+   */
+  def createDualBinauralFrameFunctions(pitch: Double, binauralPitch: Double)(implicit audioContext: AudioContext): Seq[() => Frame] = {
+    Seq(
+      createSineWaveFrameFunction(pitch, 0, 1),
+      createSineWaveFrameFunction(pitch + binauralPitch, 1, 1)
+    )
   }
 }

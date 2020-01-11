@@ -12,7 +12,16 @@ object BinauralApp extends App {
    */
   override def main(args: Array[String]): Unit = {
     parseBinauralBeatsConfiguration(args) match {
-      case Some(config) => BinauralEngine.play(config)
+      // valid config
+      case Some(config) => {
+        config.fileName match {
+          // filename option is provided, output to file
+          case Some(str) => BinauralEngine.writeToFile(config)
+          // no filename flag so invoke playback on default audio device
+          case None => BinauralEngine.play(config)
+        }
+      }
+      // invalid config
       case _ =>
     }
   }
@@ -67,7 +76,17 @@ object BinauralApp extends App {
 
         opt[Int]('d', "duration")
           .action((x, c) => c.copy(duration = x))
-          .text("the duration for which to play the binaural audio - an integer property")
+          .text("the duration for which to play the binaural audio - an integer property"),
+
+        opt[String]('f', "file")
+          .optional()
+          .action((x, c) => c.copy(fileName = Some(x)))
+          .text("the output filename - a string property"),
+
+        opt[Unit]('s', "separate_files")
+          .optional()
+          .action((_, c) => c.copy(separateFiles = true))
+          .text("split left and right audio into separate files - a boolean property")
       )
     }
     OParser.parse(optionsParser, args, BinauralBeatsConfiguration())
