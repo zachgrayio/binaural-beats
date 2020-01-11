@@ -80,7 +80,7 @@ pinned_maven_install()
 
 git_repository(
     name = "zachgrayio_scalaudio",
-    commit = "6d7dfabd71392a6b15ff3eea8b86945b12ad20f5",
+    commit = "a0aa2daccdfee2fc78b60c1a898249c0427b6a7a",
     remote = "http://github.com/zachgrayio/scalaudio.git",
-    shallow_since = "1578573315 +1100"
+    shallow_since = "1578711564 +1100"
 )
