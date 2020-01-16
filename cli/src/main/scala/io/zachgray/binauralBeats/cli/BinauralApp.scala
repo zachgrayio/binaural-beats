@@ -76,7 +76,7 @@ object BinauralApp extends App {
 
         opt[Int]('d', "duration")
           .action((x, c) => c.copy(duration = x))
-          .text("the duration for which to play the binaural audio - an integer property"),
+          .text("the duration in seconds for which to play the binaural audio - a long property"),
 
         opt[String]('f', "file")
           .optional()
