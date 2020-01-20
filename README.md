@@ -2,15 +2,88 @@
 
 A binaural beat is an [auditory illusion](https://en.wikipedia.org/wiki/Auditory_illusion)  [perceived](https://en.wikipedia.org/wiki/Perception) when two different pure-tone [sine waves](https://en.wikipedia.org/wiki/Sine_wave), both with [frequencies](https://en.wikipedia.org/wiki/Frequency) lower than 1500 Hz, with less than a 40 Hz difference between them, are presented to a [listener](https://en.wikipedia.org/wiki/Hearing) dichotically (one through each [ear](https://en.wikipedia.org/wiki/Ear)).
 
-This command line program generates binaural beats.
+This project defines a number of programs and utilities for generating binaural beats:
 
-## Build & Run from Source:
+- `//engine`: The binaural audio engine: a Scala library which can be consumed by JVM programs
+- `//cli`: A Scala CLI program which can generate binaural audio files based on input arguments
+- `//dubber`: Some various pydub-based audio utility programs, used during the ensembling steps
+- `//dsl`: A Bazel DSL which can be used to define Bazel targets which will generate binaural beats audio files when invoked with Bazel. 
+
+## DSL
+
+### Example:
+
+```starlark
+# Load the binaural DSL operations we'd like to make use of
+load(
+    "//dsl:dsl.bzl",
+    "binaural_stems",
+    "binaural_sequence",
+)
+
+# First, first, we'll invoke the Scala CLI program to generate some "binaural stem tracks".
+#
+# A "binaural stem track" is a 2 channel (stereo) wav file containing a pure sine wave oscillating at some frequency on
+# exactly one of the channels, with the other being blank. On it's own, there's nothing "binaural" about this audio file,
+# but the CLI program will output two of these files which when taken together will have a binaural beat playing between
+# them.
+#
+# The binaural CLI program is capable of interleaving these for us, but this is something we'll do manually
+# in a later step for greater control and fidelity.
+
+# Some shared parameters:
+PITCH = 300     # 300 Hz
+DURATION = 60   # 60 seconds
+
+# This will generate two wav files (left+right) for an alpha wave binaural beat with a baseline pitch of `PITCH`
+binaural_stems(
+    name = "alpha-stems",
+    pitch = PITCH,
+    binaural_pitch = 10,
+    duration = DURATION,
+)
+
+# This outputs two intermediate wav files for a beta wave binaural beat
+binaural_stems(
+    name = "beta-stems",
+    pitch = PITCH,
+    binaural_pitch = 20,
+    duration = DURATION
+)
+
+# Next, we'll use these stem tracks as inputs to a Binaural Sequence.
+#
+# A Binaural Sequence generates a stereo wav file output from an input list of stem tracks. Each "stem" consists of
+# two wav files (one for each channel) so these are first combined into a single merged stem track, and then each of these
+# merged intermediate files are concatenated together in the order specified below to produce the final output audio file.
+
+# Creates the final output, alpha-beta.wav
+binaural_sequence(
+    name = "alpha-beta-sequence",
+    stems = [
+        "//:alpha-stems",
+        "//:beta-stems",
+    ],
+)
+```
+
+### Running:
+
+The `BUILD` file in the repository root defines some targets which can be built with Bazel to generate binarual beats audio files.
+
+- `bazel build //:alpha-beta-sequence` will invoke a target in the root `BUILD` file which defines a sequence of binaural beats which first play an alpha wave and then a beta wave.
+
+## Scala CLI program
+
+This program may be useful on it's own to some users - as such, a simple CLI interface is defined and it can be invoked directly if desired.
+
+### Build & Run from Source:
 
 ```bash
 bazel run //cli:app -- alpha
 ```
 
-## Usage:
+### Usage:
 
 ```
 Usage: binaural [delta|theta|alpha|beta|gamma] [options]
