@@ -7,11 +7,15 @@ This project defines a number of programs and utilities for generating binaural 
 - `//engine`: The binaural audio engine: a Scala library which can be consumed by JVM programs
 - `//cli`: A Scala CLI program which can generate binaural audio files based on input arguments
 - `//dubber`: Some various pydub-based audio utility programs, used during the ensembling steps
-- `//dsl`: A Bazel DSL which can be used to define Bazel targets which will generate binaural beats audio files when invoked with Bazel. 
+- `//dsl`: A declarative DSL (domain-specific-language) implemented in Bazel which can be used to define Bazel targets which will generate binaural beats audio files when invoked with Bazel. 
 
-## DSL
+## Binaural DSL
 
-### Tutorial:
+The binaural DSL (domain-specific-language) is the easiest way to work with this toolkit, as each of the libraries and programs defined within is in service to enabling this easy, expressive DSL.
+
+### Tutorial
+
+These steps are all that is needed to define advanced, multi-staged binaural beats.
 
 Note: this tutorial assumes you're editing a BUILD file in the root of this repository, and have installed the prerequisites. Examples of consuming these rules in your own WORKSPACE or making use of individual components is coming soon.
 
@@ -77,7 +81,7 @@ Now we'll use these stem tracks as inputs to a Binaural Sequence.
 
 A Binaural Sequence generates a stereo wav file output from an input list of stem tracks. Each "stem" consists of two wav files (one for each channel) so these are first combined into a single merged stem track, and then each of these merged intermediate files are concatenated together in the order specified below to produce the final output audio file.
 
-This creates the final output, alpha-beta-sequence.wav:
+This creates the final output, `alpha-beta-sequence.wav`, and applies crossfading between stems for a smooth transition, as well as fade-in and fade-out at the beginning and end of the track, respectively:
 
 ```starlark
 binaural_sequence(
@@ -86,10 +90,13 @@ binaural_sequence(
         "//:alpha-stems",
         "//:beta-stems",
     ],
+    crossfade = True,
+    fade_in = True,
+    fade_out = True
 )
 ```
 
-These steps are all that is needed to define advanced, multi-staged binaural beats. See below for information on how to invoke these targets if you're new to Bazel.
+See below for information on how to invoke these targets if you're new to Bazel.
 
 ### Running:
 
