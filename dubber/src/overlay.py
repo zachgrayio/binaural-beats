@@ -3,7 +3,7 @@ from pydub import AudioSegment
 from common import Runner
 
 
-def overlay_files(wav_files, filename, output_path):
+def overlay_files(wav_files, filename, output_path, *unused):
     left = AudioSegment.from_file(wav_files[0])
     right = AudioSegment.from_file(wav_files[1])
 

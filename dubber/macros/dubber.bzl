@@ -1,14 +1,17 @@
-def dubber_genrule(name, dubber_program, srcs):
+def dubber_genrule(name, dubber_program, srcs, crossfade, fade_in, fade_out):
     native.genrule(
         name = name,
         srcs = srcs,
-        cmd = "./$(location //dubber:{program}) {output_name} $(@D) $(SRCS)".format(
-            output_name = name,
-            program = dubber_program
+        cmd = "./$(location //dubber:{program}) -n {name} -p $(@D) {c} {fi} {fo} $(SRCS)".format(
+            name = name,
+            program = dubber_program,
+            c = "-c" if crossfade else "",
+            fi = "-f" if fade_in else "",
+            fo = "-o" if fade_out else "",
         ),
         outs = [
-            "{output_name}.wav".format(
-                output_name = name
+            "{name}.wav".format(
+                name = name
             )
         ],
         tools = [

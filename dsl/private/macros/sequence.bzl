@@ -1,6 +1,6 @@
 load("//dubber:macros/dubber.bzl", "dubber_genrule")
 
-def binaural_sequence(name, stems):
+def binaural_sequence(name, stems, crossfade = False, fade_in = False, fade_out = False):
 
     # merge left & right audio for each target stem
     output_targets = []
@@ -9,7 +9,10 @@ def binaural_sequence(name, stems):
         dubber_genrule(
             name = _name,
             dubber_program = "overlay",
-            srcs = [stem]
+            srcs = [stem],
+            crossfade = crossfade,
+            fade_in = fade_in,
+            fade_out = fade_out
         )
         output_targets.append(":{name}".format(name=_name))
 
@@ -17,5 +20,8 @@ def binaural_sequence(name, stems):
     dubber_genrule(
         name = name,
         dubber_program = "concat",
-        srcs = output_targets
+        srcs = output_targets,
+        crossfade = crossfade,
+        fade_in = fade_in,
+        fade_out = fade_out
     )
