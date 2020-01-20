@@ -75,7 +75,7 @@ Now we'll use these stem tracks as inputs to a Binaural Sequence.
 
 A Binaural Sequence generates a stereo wav file output from an input list of stem tracks. Each "stem" consists of two wav files (one for each channel) so these are first combined into a single merged stem track, and then each of these merged intermediate files are concatenated together in the order specified below to produce the final output audio file.
 
-# Creates the final output, alpha-beta-sequence.wav
+This creates the final output, alpha-beta-sequence.wav:
 
 ```starlark
 binaural_sequence(
