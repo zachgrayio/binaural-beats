@@ -43,7 +43,7 @@ binaural_stems(
 
 # Creates the final output, alpha-beta.wav
 binaural_sequence(
-    name = "alpha-beta",
+    name = "alpha-beta-sequence",
     stems = [
         "//:alpha-stems",
         "//:beta-stems",
