@@ -41,7 +41,7 @@ def dubber_genrule(name, dubber_program, srcs):
     native.genrule(
         name = name,
         srcs = srcs,
-        cmd = "./$(location //dubber:{program}) {output_name} $(@D)".format(
+        cmd = "./$(location //dubber:{program}) {output_name} $(@D) $(SRCS)".format(
             output_name = name,
             program = dubber_program
         ),
