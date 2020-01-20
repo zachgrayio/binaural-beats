@@ -5,7 +5,7 @@ load(
     "binaural_sequence",
 )
 
-# First, first, we'll invoke the Scala CLI program to generate some "binaural stem tracks".
+# First, we'll invoke the Scala CLI program to generate some "binaural stem tracks".
 #
 # A "binaural stem track" is a 2 channel (stereo) wav file containing a pure sine wave oscillating at some frequency on
 # exactly one of the channels, with the other being blank. On it's own, there's nothing "binaural" about this audio file,
