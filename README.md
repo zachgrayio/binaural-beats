@@ -13,6 +13,8 @@ This project defines a number of programs and utilities for generating binaural 
 
 ### Tutorial:
 
+Note: this tutorial assumes you're editing a BUILD file in the root of this repository, and have installed the prerequisites. Examples of consuming these rules in your own WORKSPACE or making use of individual components is coming soon.
+
 #### 1: Load the binaural DSL operations we'd like to make use of:
 
 ```starlark
@@ -125,7 +127,15 @@ Gamma pattern preset; This frequency pattern accounts for a range of 30–50 Hz.
   -d, --duration <value>        the duration for which to play the binaural audio - an integer property
 ```
 
+## Prerequisites
+
+- bazel, python, jdk, scala
+- ffmpeg (dependency of pydub): `brew install ffmpeg`
+- sox will soon be required if you want to make use of advanced audio effects
+
+
 ## More About Binaural Beats:
+
 (via Wikipedia)
 
 A binaural beat is an [auditory illusion](https://en.wikipedia.org/wiki/Auditory_illusion)  [perceived](https://en.wikipedia.org/wiki/Perception) when two different pure-tone [sine waves](https://en.wikipedia.org/wiki/Sine_wave), both with [frequencies](https://en.wikipedia.org/wiki/Frequency) lower than 1500 Hz, with less than a 40 Hz difference between them, are presented to a [listener](https://en.wikipedia.org/wiki/Hearing) dichotically (one through each [ear](https://en.wikipedia.org/wiki/Ear)).
