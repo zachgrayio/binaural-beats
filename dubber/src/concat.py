@@ -12,13 +12,13 @@ def concat_files(wav_files, filename, dirname, output_path):
     merged = base.overlay(first)
     merged = merged.overlay(second, position=len(first))
     output = os.path.join(output_path, filename)
-    print("Exporting concatenated audio file to {path}".format(path=output))
+    print("Exporting concatenated binaural sequence to {path}".format(path=output))
     merged.export(output, format='wav')
     sys.exit()
 
 
 def main():
-    runner = Runner(concat_files, "Concatenating files...")
+    runner = Runner(concat_files, "Concatenating binaural audio clips...")
     runner.main()
 
 

@@ -16,38 +16,34 @@ def binaural_clip_stems(name, pitch, binaural_pitch, duration, **kwargs):
     )
 
 
-def binaural_sequence(name, srcs, **kwargs):
+def binaural_sequence(name, srcs):
 
     # merge left & right audio for each target stem
-    _srcs = []
-    for i, src in enumerate(srcs):
+    output_targets = []
+    for i, input_target in enumerate(srcs):
         _name = "{name}_{index}".format(name=name, index=i)
-        native.genrule(
+        dubber_genrule(
             name = _name,
-            srcs = [src],
-            cmd = "./$(location //dubber:overlay) {output_name} $(@D)".format(
-                output_name = _name,
-            ),
-            outs = [
-                "{output_name}.wav".format(
-                    output_name = _name
-                )
-            ],
-            tools = [
-                "//dubber:overlay"
-            ],
-            visibility = ["//visibility:public"],
-            executable = True,
-            **kwargs
+            dubber_program = "overlay",
+            srcs = [input_target]
         )
-        _srcs.append(":{name}".format(name=_name))
+        output_targets.append(":{name}".format(name=_name))
 
     # concatenate merged stems
+    dubber_genrule(
+        name = name,
+        dubber_program = "concat",
+        srcs = output_targets
+    )
+
+
+def dubber_genrule(name, dubber_program, srcs):
     native.genrule(
         name = name,
-        srcs = _srcs,
-        cmd = "./$(location //dubber:concat) {output_name} $(@D)".format(
+        srcs = srcs,
+        cmd = "./$(location //dubber:{program}) {output_name} $(@D)".format(
             output_name = name,
+            program = dubber_program
         ),
         outs = [
             "{output_name}.wav".format(
@@ -55,8 +51,8 @@ def binaural_sequence(name, srcs, **kwargs):
             )
         ],
         tools = [
-            "//dubber:concat"
+            "//dubber:{program}".format(program=dubber_program)
         ],
         visibility = ["//visibility:public"],
-        executable = True,
+        executable = True
     )

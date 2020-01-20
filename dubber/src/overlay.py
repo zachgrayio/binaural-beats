@@ -10,13 +10,13 @@ def overlay_files(wav_files, filename, dirname, output_path):
 
     merged = left.overlay(right)
     output = os.path.join(output_path, filename)
-    print("Exporting overlaid audio file to {path}".format(path=output))
+    print("Exporting merged binaural clip to {path}".format(path=output))
     merged.export(output,  format='wav')
     sys.exit()
 
 
 def main():
-    runner = Runner(overlay_files, "Overlaying files...")
+    runner = Runner(overlay_files, "Merging left & right binaural stems...")
     runner.main()
 
 
