@@ -27,5 +27,5 @@ class Runner:
 
 
 def _invalid_input():
-    print('You must specify the path to merge')
+    print('Invalid input! Expected 4+ args: output_filename output_path src1 src2 [srcN ...]')
     sys.exit()
