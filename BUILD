@@ -47,6 +47,7 @@ binaural_sequence(
     stems = [
         "//:alpha-stems",
         "//:beta-stems",
+        "//:alpha-stems",
     ],
     crossfade = True,
     fade_in = True,
