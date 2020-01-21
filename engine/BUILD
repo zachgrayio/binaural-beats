@@ -6,11 +6,11 @@ load(
 scala_library(
     name = "engine",
     srcs = glob(["src/main/**/*.scala"]),
-    deps = [
-        "@zachgrayio_scalaudio//scalaudio-amp:scalaudio-amp",
-    ],
+    visibility = ["//visibility:public"],
     exports = [
-        "@zachgrayio_scalaudio//scalaudio-amp:scalaudio-amp",
+        "@zachgrayio_scalaudio//scalaudio-amp",
     ],
-    visibility = ["//visibility:public"]
+    deps = [
+        "@zachgrayio_scalaudio//scalaudio-amp",
+    ],
 )
