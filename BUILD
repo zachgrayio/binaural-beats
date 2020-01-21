@@ -1,8 +1,8 @@
 # Load the binaural DSL operations we'd like to make use of
 load(
     "//dsl:dsl.bzl",
-    "binaural_stems",
     "binaural_sequence",
+    "binaural_stems",
 )
 
 # First, we'll invoke the Scala CLI program to generate some "binaural stem tracks".
@@ -16,23 +16,24 @@ load(
 # in a later step for greater control and fidelity.
 
 # Some shared parameters:
-PITCH = 300     # 300 Hz
-DURATION = 60   # 60 seconds
+PITCH = 300  # 300 Hz
+
+DURATION = 60  # 60 seconds
 
 # This will generate two wav files (left+right) for an alpha wave binaural beat with a baseline pitch of `PITCH`
 binaural_stems(
     name = "alpha-stems",
-    pitch = PITCH,
     binaural_pitch = 10,
     duration = DURATION,
+    pitch = PITCH,
 )
 
 # This outputs two intermediate wav files for a beta wave binaural beat
 binaural_stems(
     name = "beta-stems",
-    pitch = PITCH,
     binaural_pitch = 20,
-    duration = DURATION
+    duration = DURATION,
+    pitch = PITCH,
 )
 
 # Next, we'll use these stem tracks as inputs to a Binaural Sequence.
@@ -44,13 +45,12 @@ binaural_stems(
 # Creates the final output, alpha-beta.wav
 binaural_sequence(
     name = "alpha-beta-sequence",
+    crossfade = True,
+    fade_in = True,
+    fade_out = True,
     stems = [
         "//:alpha-stems",
         "//:beta-stems",
         "//:alpha-stems",
     ],
-    crossfade = True,
-    fade_in = True,
-    fade_out = True
 )
-

@@ -11,12 +11,12 @@ def dubber_genrule(name, dubber_program, srcs, crossfade, fade_in, fade_out):
         ),
         outs = [
             "{name}.wav".format(
-                name = name
-            )
+                name = name,
+            ),
         ],
         tools = [
-            "//dubber:{program}".format(program=dubber_program)
+            "//dubber:{program}".format(program = dubber_program),
         ],
         visibility = ["//visibility:public"],
-        executable = True
+        executable = True,
     )

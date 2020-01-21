@@ -7,9 +7,9 @@ scala_binary(
     name = "app",
     srcs = glob(["src/main/**/*.scala"]),
     main_class = "io.zachgray.binauralBeats.cli.BinauralApp",
+    visibility = ["//visibility:public"],
     deps = [
-        "//engine:engine",
+        "//engine",
         "@maven//:com_github_scopt_scopt_2_11",
     ],
-    visibility = ["//visibility:public"]
 )
