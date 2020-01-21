@@ -1,8 +1,7 @@
 package io.zachgray.binauralBeats.engine
 
-import io.zachgray.binauralBeats.engine.BinauralEngine.{createBinauralFrameFunction, createDualBinauralFrameFunctions}
 import scalaudio.core.types.{Frame, Pitch}
-import scalaudio.core.{AudioContext, DefaultAudioContext, ScalaudioConfig}
+import scalaudio.core.{AudioContext, DefaultAudioContext}
 import scalaudio.units.AmpSyntax
 import scalaudio.units.filter.{GainFilter, StereoPanner}
 import scalaudio.units.ugen.{OscState, Sine}
